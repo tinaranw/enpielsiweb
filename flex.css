@@ -1,0 +1,426 @@
+html,body {
+	height:100%;
+	margin:0px;
+}
+
+/* WRAPPER */
+
+.wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	width:100%;
+	height:100%;
+}
+
+/* SECTION */
+
+.section {
+
+	display:flex;
+	flex-direction: row;
+	width:100%;
+    min-height:100%;
+    position: relative;
+}
+
+.section.header {
+	min-height:100%;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .section { 
+        /*min-height:auto;*/
+        flex-direction: column;
+    }
+
+}
+
+/* BOXES */
+
+.box-1 {
+	width:8.333333333%;
+}
+
+.box-2 {
+	width:16.66666667%;
+}
+
+.box-3 {
+	width:25.00%;
+}
+
+.box-4 {
+	width:33.33333333%;
+}
+
+.box-5 {
+	width:41.66666667%;
+}
+
+.box-6 {
+	width:50.00%;
+}
+
+.box-7 {
+	width:58.33333333%;
+}
+
+.box-8 {
+	width:66.666666667%;
+}
+
+.box-9 {
+	width:75.00%;
+}
+
+.box-10 {
+	width:83.33333333%;
+}
+
+.box-11 {
+	width:91.66666667%;
+}
+
+.box-12 {
+	width:100.00%;
+}
+
+.box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11,.box-12 {
+    position: relative;
+    /*flex-shrink: 0;*/
+    display:flex;
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 960px) {
+
+	.section{
+		flex-direction:column;
+	}
+
+    .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9,.box-10,.box-11,.box-12 {
+        width:100%;
+        height: auto;
+    }
+
+}
+
+/* OVERLAY */
+
+.overlay-bg {
+	position: absolute; 
+	top:0; 
+	left:0;
+	width:100%;
+	height:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.overlay-color,.overlay-content {
+	position: absolute; 
+	top:0; 
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/* GRID - Inspired by Bootstrap */
+
+/* CONTAINER */
+
+.container-fluid {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:space-between;
+	box-sizing: border-box;
+	width:100%;
+	padding: 50px 35px;
+}
+
+/* ROWS */
+
+.row {
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+}
+
+/* COLUMNS */
+
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+	position:relative;
+	width:100%;
+	min-height:1px;
+	padding-right:10px;
+	padding-left:10px;
+	box-sizing: border-box;
+}
+
+.col-1 {
+	flex:0 0 8.333333%;
+	max-width:8.333333%;
+}
+
+.col-2 {
+	flex:0 0 16.66666667%;
+	max-width:16.66666667%;
+}
+
+.col-3 {
+	flex:0 0 25.00%;
+	max-width:25.00%;
+}
+
+.col-4 {
+	flex:0 0 33.33333333%;
+	max-width:33.33333333%;
+}
+
+.col-5 {
+	flex:0 0 41.66666667%;
+	max-width:41.66666667%;
+}
+
+.col-6 {
+	flex:0 0 50.00%;
+	max-width:50.00%;
+}
+
+.col-7 {
+	flex:0 0 58.33333333%;
+	max-width:58.33333333%;
+}
+
+.col-8 {
+	flex:0 0 66.666666667%;
+	max-width:66.666666667%;
+}
+
+.col-9 {
+	flex:0 0 75.00%;
+	max-width:75.00%;
+}
+
+.col-10 {
+	flex:0 0 83.33333333%;
+	max-width:83.33333333%;
+}
+
+.col-11 {
+	flex:0 0 91.66666667%;
+	max-width:91.66666667%;
+}
+
+.col-12 {
+	flex:0 0 100.00%;
+	max-width:100.00%;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+		flex:0 0 100.00%;
+		max-width:100.00%;
+	}
+
+}
+
+/* SUPPORTING STYLES */
+
+/* HEIGHTS */
+
+.height-10 {
+	height: 10%;
+}
+
+.height-20 {
+	height: 20%;
+}
+
+.height-30 {
+	height: 30%;
+}
+
+.height-40 {
+	height: 40%;
+}
+
+.height-50 {
+	height: 50%;
+}
+
+.height-60 {
+	height: 60%;
+}
+
+.height-70 {
+	height: 70%;
+}
+
+.height-80 {
+	height: 80%;
+}
+
+.height-90 {
+	height: 90%;
+}
+
+.height-100 {
+	height: 100%;
+}
+
+/* ALIGN ITEMS - w/ .box */
+
+.v-top {
+	align-items: flex-start;
+}
+
+.v-mid {
+	align-items: center;
+}
+
+.v-bot {
+	align-items: flex-end;
+}
+
+.section.header .v-top, .section.header .v-mid, .section.header .v-bot {
+	height:100%;
+}
+
+/* JUSTIFY CONTENT w/ .row */
+
+.h-left {
+	justify-content: flex-start;
+}
+
+.h-center {
+	justify-content: center;
+}
+
+.h-right {
+	justify-content: flex-end;
+}
+
+/*
+Container-fluid --> margin-left/right: auto (grid.css), this makes the justify-content failed to work. 
+*/
+
+.h-left > div {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.h-center > div {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.h-right > div {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* SPACE */
+
+.space-05 {
+	height: 05px;
+	width:100%;
+}
+
+.space-10 {
+	height: 10px;
+	width:100%;
+}
+
+.space-15 {
+	height: 15px;
+	width:100%;
+}
+
+.space-20 {
+	height: 20px;
+	width:100%;
+}
+
+.space-25 {
+	height: 25px;
+	width:100%;
+}
+
+.space-30 {
+	height: 30px;
+	width:100%;
+}
+
+.space-35 {
+	height: 35px;
+	width:100%;
+}
+
+.space-40 {
+	height: 40px;
+	width:100%;
+}
+
+.space-45 {
+	height: 45px;
+	width:100%;
+}
+
+.space-50 {
+	height: 50px;
+	width:100%;
+}
+
+.space-55 {
+	height: 55px;
+	width:100%;
+}
+
+.space-60 {
+	height: 60px;
+	width:100%;
+}
+
+.space-65 {
+	height: 65px;
+	width:100%;
+}
+
+.space-70 {
+	height: 70px;
+	width:100%;
+}
+
+.space-75 {
+	height: 75px;
+	width:100%;
+}
+
+.space-80 {
+	height: 80px;
+	width:100%;
+}
+
+.space-85 {
+	height: 85px;
+	width:100%;
+}
+
+.space-90 {
+	height: 90px;
+	width:100%;
+}
+
+.space-95 {
+	height: 95px;
+	width:100%;
+}
+
+.space-100 {
+	height: 100px;
+	width:100%;
+}

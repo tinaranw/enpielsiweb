@@ -1,0 +1,492 @@
+@import url("exolight.otf");
+@import url("exoregular.otf");
+@import url("ailerons.otf");
+/* Styles to make skrollable work. Copy these to your file. */
+.skrollable {
+  position: fixed;
+  z-index: 100;
+}
+.skrollr-mobile .skrollable {
+  position: absolute;
+}
+.skrollable .skrollable {
+  position: absolute;
+}
+
+.skrollable .skrollable .skrollable {
+  position: static;
+}
+/* End skrollable styles */
+
+centering {
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+html {
+  font-family: "Exo", Roboto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(180deg, #002833, #00161d); */
+  /* background-color: #00161d; */
+  color: #cce0e7;
+  overflow-y:auto;  
+overflow-x:hidden;
+max-width: 100% !important;
+min-width: 100% !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container-navbar {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 200;
+  display:none;
+}
+.navbarMenu {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+.naviContainer {
+  width: 100%;
+  height: 200px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  margin: auto;
+  /* padding: 60px 0; */
+  box-sizing: border-box;
+  position: absolute;
+}
+.naviMenu {
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 30px;
+  height: 150px;
+  text-align: center;
+  display: inline-block;
+  transition: 1s;
+  transform: scale(1);
+}
+.naviHome:hover,
+.naviIntro:hover,
+.naviRegister:hover,
+.naviContact:hover {
+  transition: 1s;
+  transform: scale(1.5);
+}
+.menuMouseOver {
+  transition: 1s;
+  transform: scale(0.8);
+  filter: blur(2px);
+}
+.menu-screen__nav._mouse-over-item .menu-screen__nav-item {
+  transform: scale(0.8);
+  opacity: 0.7;
+  transition: 0.65s;
+  filter: blur(2px);
+  will-change: transform, opacity, filter;
+  transition-timing-function: ease-out;
+}
+
+.naviNumber,.naviNum {
+  color: #33a9bf;
+  text-align: left;
+  margin: auto;
+  height: auto;
+}
+.naviHome:hover .naviTitle, .naviIntro:hover .naviTitle, .naviRegister:hover .naviTitle, .naviContact:hover .naviTitle {
+  background-position: 0 100%;
+}
+
+.naviBlockMobile{
+  margin: 30px;
+}
+
+.naviTitle, .naviTit {
+  font-size: 50px;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#00374B), color-stop(50%,#00374B), color-stop(50%, black));
+  background: linear-gradient(to right, #00374B,#00374B 50%, black 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.naviLogoContainer{
+    opacity: 0;
+    text-align: right;
+    width: 100%;
+    height: auto;
+    right: 10px;
+    left: 0;
+    bottom: 30px;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+}
+.naviLogo{
+    width: 100%;
+    height: 100px;
+    max-width: 100px;
+    margin: 0 30px;
+    display: inline-block;
+}
+
+
+.naviLogoUC{
+  background-image: url(img/logouc.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+.naviLogoIMT{
+  background-image: url(img/logosuimt.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+.naviLogoNPLC{
+  background-image: url(img/logo.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+
+
+
+.mainMenu {
+  /* visibility:  visible; */
+  width: 100%;
+}
+
+.box {
+  background: black;
+  width: 50px;
+  height: 50px;
+}
+.boxa {
+  background: cadetblue;
+  width: 50px;
+  height: 50px;
+}
+.boxaa {
+  background: cadetblue;
+  width: 50px;
+  height: 50px;
+}
+.navbarBtn {
+  z-index: 300;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  background: cadetblue;
+  opacity: 0;
+  top: 0px;
+  right: 250px;
+  width: 50px;
+  height: 50px;
+  padding: 15px 5px;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.navbarBtnMobile {
+  z-index: 300;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  background: cadetblue;
+  opacity: 0;
+  top: 0px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 15px 5px;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.navbarText {
+  margin: auto 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.nplcMainLogo {
+  opacity: 0;
+  right: 0;
+  left: 0;
+  top: 150px;
+  width: 645px;
+  height: 594px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  background-image: url(../img/logo.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+
+@font-face {
+  font-family: Ailerons;
+  src: url("ailerons.otf") format("opentype");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ailerons;
+  margin:0;
+}
+
+p {
+  font-family: Exo;
+  margin:0;
+  line-height:1.5;
+  text-align: justify;
+}
+
+.display h1{
+  text-align: center;
+  color: #cce0e7;
+  font-weight: 300 !important;
+  font-size: 76px;
+}
+
+
+.display p{
+  text-align: center;
+  color: #cce0e7;
+  font-weight: 300 !important;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300 !important;
+}
+
+.dark {
+  color: #002833;
+}
+
+.display-splatter {
+  position:absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 100%;
+  max-height: 900px;
+  z-index:0;
+}
+
+.display-fish1 {
+  position:absolute;
+  max-width:100%;
+  width:220px;
+  z-index:0;
+  top:10vw;
+  left: 27vw;
+}
+
+.display-fish2 {
+  position:absolute;
+  max-width:100%;
+  width:150px;
+  z-index:0;
+  bottom:8vw;
+  right: 30vw;
+}
+
+.mw-600 {
+  max-width:600px;
+}
+
+.information .subtitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.nplc-info {
+  max-width:1100px; 
+  /* background-color: #ebfdff; */
+  background: url(img/brushbg.png) no-repeat left center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+  max-height: 600px;
+  padding: 30px 80px !important;
+}
+
+.overlay-content {
+  overflow: hidden;
+}
+
+.nplc-logo {
+  width: 100%; 
+  max-width: 200px;
+}
+
+.whatisnplc{
+  margin-top: 15px;
+}
+
+.button.category {
+  background-color:#00bcd4; 
+  border-radius: 100px;
+  width: 50px; 
+  height: 50px;
+  color: #cce0e7;
+  cursor: pointer;
+}
+
+.button.category p {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  margin: 10px 0;
+}
+
+.categories hr {
+  width: 20px;text-align: left;display:inline-block;
+}
+.category-2 {
+  display: none;
+}
+
+.requirements hr {
+  color: #cce0e7;display: inline-block; width: 70%;
+}
+
+.require {
+  max-width:1100px;
+  background: url(img/splatter-bg.png) no-repeat right center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden; 
+  height: 400px;
+  padding: 20px 50px;
+}
+
+.contact.section .short-hr {
+  width: 30px; 
+  color: #cce0e7;
+  display: inline-block;
+}
+
+.wrapper{
+  z-index: 1 !important;
+}
+
+.sub {
+  letter-spacing: 6px;
+  color: #66becf;
+}
+
+.contact ion-icon {
+  font-size: 40px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #def8fc;
+}
+
+@media only screen and (max-width: 850px) {
+  .nplc-info.container-fluid{
+    max-height: 100%;
+    /* padding: 50px 20px !important; */
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+  .nplc-info.container-fluid{
+    /* background: url(img/splatter-bg.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    height: auto; */
+    background-color: #def8fc;
+  }
+
+  .nplc-info {
+    background: #fff;
+  }
+
+  .button.category {
+    display: inline-block;
+    margin: 30px 10px;
+  }
+  .button.category p{
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+
+  .container-navbar {
+    display:none;
+  }
+  .navbarBtn {
+    display:none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .nplc-info{
+    /* padding:0 !important; */
+    padding: 30px 30px !important;
+  }
+
+  .naviMenu {
+    display: block;
+    text-align: center;
+  }
+  
+}
+
+
